@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cachorros e Donos</title>
+    <link rel="stylesheet" href="styler.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <h1>PERDIGUEIROS</h1>
+    <button id="addDogBtn"><i class="fas fa-plus"></i> Adicionar Cachorro</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Cachorro</th>
+                <th>Dono</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="dogList">
+            <!-- Dados dos cachorros serão adicionados dinamicamente -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar cachorro -->
+    <div id="addDogModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Adicionar Cachorro</h2>
+            <form id="dogForm">
+                <label for="dogName">Cachorro:</label>
+                <input type="text" id="dogName" required>
+
+                <label for="ownerName">Dono:</label>
+                <input type="text" id="ownerName" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="imageUrl">Imagem (URL):</label>
+                <input type="text" id="imageUrl" value="https://placedog.net/150/150">
+
+                <button type="submit">Salvar</button>
+                <button type="button" onclick="closeModal()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; ROMULO ROCHA (202402382268)</p>
+    </footer>
+</body>
+</html>
